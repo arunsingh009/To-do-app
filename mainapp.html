@@ -67,8 +67,9 @@
       border-radius: 5px;
       background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
       border: double 2px transparent;
-      box-shadow: 0 10px 30px rgba(118, 85, 225, .3);
+      /* box-shadow: 0 10px 30px rgba(118, 85, 225, .3); */
       font-size: 16px;
+      margin-right: 3px;
       cursor: pointer;
     }
 
@@ -208,6 +209,7 @@
         <div id="myDIV" class="header">
           <input type="text" id="myInput" class="task" placeholder="Let me remind you...">
           <span onclick="newElement()" class="Btn">Add !!!</span>
+          <button type="button" id="clear-list" onclick="removeAll()" class="Btn">Clear Items</button>
         </div>
 
       </div>
@@ -223,6 +225,7 @@
 
       </div>
     </section>
+    
   </main>
   <script>
     // Create a "close" button and append it to each list item
@@ -280,6 +283,12 @@
         }
       }
     }
+
+    //Clearing the list
+    function removeAll(){
+     var lst = document.getElementsByTagName("ul");
+    lst[0].innerHTML = "";
+}
   </script>
 
 </body>
